@@ -1,80 +1,38 @@
-# 🔋 EV Battery Remaining Useful Life (RUL) Prediction & Simulation
+# 🔋 EV Battery Remaining Useful Life (RUL) Prediction
 
-An end-to-end Machine Learning web application designed to simulate and predict the **Remaining Useful Life (RUL)** of Electric Vehicle (EV) lithium-ion batteries based on operational parameter analysis.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B?style=for-the-badge&logo=streamlit)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.6.1-F7931E?style=for-the-badge&logo=scikitlearn)
+
+An interactive Machine Learning dashboard built with Streamlit to simulate and predict the **Remaining Useful Life (RUL)** of Electric Vehicle (EV) batteries based on operational parameters.
 
 ---
 
-## 📸 App Dashboard Preview
+## 📸 Dashboard Preview
 
 ![EV Battery Simulation Dashboard](./assets/photo.png)
 
+---
+
+## 🎯 Project Overview
+
+This application acts as the **Simulation & Deployment Interface (Project 3)** for the EV Battery RUL Prediction system. It consumes a trained machine learning model exported from Google Colab and allows users to input live battery parameter values to estimate remaining charge cycles.
+
+### Key Features
+* ⚡ **Real-time Prediction**: Instant RUL calculation using Gradient Boosting Regressor.
+* 🎛️ **Multi-Parameter Input**: Adjust Voltage, Current, Temperature, Capacity, and internal health metrics.
+* 🛠️ **Seamless Integration**: Loads pre-trained model artifacts (`model.pkl`) without cloud latency.
 
 ---
 
-## 📌 Project Overview
-
-Battery degradation analysis is crucial for EV safety and performance optimization. This project utilizes machine learning algorithms (trained on battery charge/discharge cycles) to predict remaining lifecycle capacity in real-time through an interactive Streamlit user interface.
-
-### **Key Features:**
-- **Real-Time Simulation:** Live parameter inputs for Voltage, Current, Temperature, Capacity, and operational cycles.
-- **Trained ML Model:** Powered by a tuned `GradientBoostingRegressor` model trained during Project 2.
-- **Interactive UI:** Built using Streamlit for fast parameter testing and clear visual outputs.
-
----
-
-## 📁 Project Structure
+## 🛠️ Project Structure
 
 ```text
-ev-battery-streamlit-app/
-│
-├── app.py                 # Streamlit web application frontend & logic
-├── model.pkl              # Trained GradientBoostingRegressor model file
-├── venv/                  # Local Python virtual environment
-└── README.md              # Project documentation
-```
-
----
-
-## 🛠️ Tech Stack & Requirements
-
-- **Language:** Python 3.11+
-- **Framework:** Streamlit
-- **Machine Learning:** Scikit-Learn, NumPy
-- **Model Serialization:** Pickle / Joblib
-
----
-
-## 🚀 How to Run Locally
-
-### 1. Clone or Open Project Directory
-Navigate to your project root folder:
-```bash
-cd ev-battery-streamlit-app
-```
-
-### 2. Activate Virtual Environment
-```bash
-source venv/bin/activate
-```
-
-### 3. Install Dependencies (If not installed)
-```bash
-pip install streamlit scikit-learn numpy
-```
-
-### 4. Run the Streamlit Application
-```bash
-streamlit run app.py
-```
-
-Open your browser at `http://localhost:8501` to view the running dashboard.
-
----
-
-## 📊 Model Details
-
-- **Model Type:** GradientBoostingRegressor
-- **Features (8 Inputs):** Voltage (V), Current (A), Temperature (°C), Current Capacity (Ah), and operational status indicators.
-- **Target Variable:** Remaining Useful Life (RUL in Cycles)
-
-**made by SHUBAM SARKAR**
+ev-battery-rul-predictor/
+├── .venv/                      # Python Virtual Environment
+├── assets/                     # Media & Screenshots
+│   └── photo.png              # Dashboard Preview Image
+├── app.py                      # Streamlit Application Script
+├── model.pkl                   # Trained ML Model (Scikit-Learn 1.6.1)
+├── README.md                   # Project Documentation
+└── requirements.txt            # Dependencies List
