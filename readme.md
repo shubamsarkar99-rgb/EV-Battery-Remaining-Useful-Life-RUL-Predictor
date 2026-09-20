@@ -6,7 +6,7 @@ This project simulates and predicts the **Remaining Useful Life (RUL)** of Elect
 
 ### Dashboard Preview
 
-![EV Battery Simulation Dashboard](./assets/photo.png)
+![EV Battery Simulation Dashboard](photo.png)
 
 ---
 
